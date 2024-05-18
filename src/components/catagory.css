@@ -1,0 +1,110 @@
+.category {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.Category-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.Category-head h1 {
+    margin-left: 20px;
+}
+
+.Category-head p {
+    margin-right: 20px;
+}
+
+.Cart-Category {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    flex-direction: row;
+}
+
+.gotoPrevButton {
+    background-color: transparent;
+    position: absolute;
+    top: 60%;
+    left: 0px;
+    color: #a29b9b;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 2px;
+}
+
+.gotoNextButton {
+    background-color: transparent;
+    position: absolute;
+    top: 60%;
+    right: 0;
+    color: #a29b9b;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 2px;
+}
+
+.gotoPrevButton:hover {
+    color: rgb(214, 14, 14);
+    border: 1px solid black;
+}
+
+.gotoNextButton:hover {
+    color: rgb(214, 14, 14);
+    border: 1px solid black;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.slide img {
+    width: 150px;
+    height: 150px;
+}
+
+.Cart-items {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    flex-direction: row;
+    margin: 40px;
+}
+
+.slide-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 220px;
+    height: auto;
+    border: 1px solid grey;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.slide-item img {
+    width: 150px;
+    height: 150px;
+}
+
+.slide-item button {
+    padding: 10px 60px;
+    color: #fff;
+    font-weight: 600;
+    background-color: rgb(6, 168, 47);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}

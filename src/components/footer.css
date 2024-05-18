@@ -1,0 +1,50 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(217, 217, 217);
+    overflow-x: hidden;
+}
+.footer-main{
+    display: flex;
+    margin: 20px;
+}
+.footer-section{
+    min-width: 200px;
+    padding: 20px;
+}
+.footer-section h3{
+    padding: 20px;
+}
+.footer-section li{
+    padding: 5px;
+    list-style: none;
+}
+input{
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-indent: 5px;
+}
+button{
+    padding: 10px 10px;
+    color: #fff;
+    background-color: rgb(6, 168, 47);
+    border: none;
+    outline: none;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+#back-to-top{
+    background-color: transparent;
+    color: rgb(28, 27, 27);   
+}
+#title-company{
+    color: rgb(49, 114, 19);
+    font-size: 35px;
+    font-weight: 700;
+}

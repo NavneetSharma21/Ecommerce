@@ -1,0 +1,96 @@
+/* Carousel.css */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+}
+
+.imageText {
+    position: absolute;
+    top: 86%;
+    left: 49%;
+    right: 50%;
+    font-size: 18px;
+    padding: 5px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 450px;
+    box-sizing: border-box;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.prevButton,
+.nextButton {
+    position: absolute;
+    top: 90%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.nextButton {
+    left: 52%;
+}
+
+.prevButton {
+    right: 52%;
+}
+
+.extra_info {
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 60%;
+}
+
+.extra_info .text {
+    width: 100%;
+}
+
+.extra_info .text p {
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    opacity: 80%;
+   }
+
+.extra_info .text h1 {
+    color: #fff;
+    font-size: 50px;
+}
+.ButtonOnMain{
+    margin-top: 15px;
+}
+#btn{
+    outline: none;
+    border: none;
+    padding: 15px;
+    background-color: rgb(6, 168, 47) !important;
+    color: #fff;
+    outline: none;
+    border: none;
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+#ratings{
+    color: yellow;
+}
+
