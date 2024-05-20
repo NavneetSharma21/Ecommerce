@@ -5,7 +5,6 @@
   min-height: 100vh; 
   overflow-x: hidden; 
   scroll-behavior: smooth;
-  
 }
 .MainHead{
   display: flex;
@@ -20,8 +19,9 @@
   background-color: rgb(3, 78, 43);
   height: 70px;
   width: 100%; 
-  position: sticky; /* Make the logo-search sticky */
+  position: fixed; /* Make the logo-search sticky */
   top: 0;
+  z-index: 1000;
 }
 .logo-search .logo{
  display: flex;
@@ -95,7 +95,7 @@
 .second-header{
    width: 100%;
    margin-left: 20px;
-   transition: transform 0.3s ease-in-out;
+   margin-top: 70px;
  }
 .second-header ul{
   display: flex;
@@ -114,7 +114,7 @@ margin: 8px 10px;
 text-decoration: none;
 }
 .second-header ul li:hover{
-  border-bottom: 2px solid blue; 
+  border-bottom: 2px solid rgb(99, 8, 3); 
   }
 .second-header ul #button{
  padding: 10px 60px;
