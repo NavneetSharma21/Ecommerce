@@ -111,8 +111,11 @@ font-weight: 500;
 list-style: none;
 padding: 5px 10px;
 margin: 8px 10px;
-
+text-decoration: none;
 }
+.second-header ul li:hover{
+  border-bottom: 2px solid blue; 
+  }
 .second-header ul #button{
  padding: 10px 60px;
  color: #fff;
@@ -123,10 +126,14 @@ margin: 8px 10px;
  border-radius: 5px;
 }
 .second-header ul li:nth-last-child(1) {
-  flex-basis: 100%;
+  flex-basis: 10%;
   box-sizing: border-box; 
   margin-left: 20px;
 }
+.second-header ul li .home-link{
+   text-decoration: none;
+   color: black;
+  }
 
 
 @media (max-width: 768px) {
@@ -135,4 +142,5 @@ margin: 8px 10px;
     width: 100%;
     margin-left: 0;
   }
+
  }

@@ -1,12 +1,40 @@
 import React, { useState } from "react";
 import {FaUser, FaShoppingCart} from "react-icons/fa";
 import CartPopup from "./cartPopUp";
-const Header = ({cartItems, removeFromCart})=>{
+import { NavLink, useNavigate} from 'react-router-dom';
 
+const Header = ({cartItems, removeFromCart, handleSearch, isSearching})=>{
+
+  const [searchQuery, setSearchQuery] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const navigate = useNavigate();
+
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
   };
+
+  const handleInputChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch(searchQuery, selectedCategory)
+      console.log(searchQuery, selectedCategory)
+    }
+  };
+
+  const handleLink =()=>{
+    if (isSearching) {
+      handleSearch('', ''); 
+    }
+     navigate('/');
+  }
  return(
 <>
   <div className="MainHead">
@@ -15,12 +43,14 @@ const Header = ({cartItems, removeFromCart})=>{
         <h3 >Canopy</h3>
       </div>
       <div className="search">
-        <select>
-          <option value="category1">Fruits</option>
-          <option value="category2">Vegetables</option>
-          <option value="category3">Dairy</option>
+        <select value={selectedCategory} onChange={handleCategoryChange}>
+          <option value="fruits">Fruits</option>
+          <option value="vegetables">Vegetables</option>
+          <option value="dairy">Dairy</option>
         </select>
-        <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Search..."
+             onChange={handleInputChange}
+              onKeyPress={handleKeyPress} />
       </div>
       <div className="Icon-Profile">
       <div className="profile">
@@ -35,7 +65,7 @@ const Header = ({cartItems, removeFromCart})=>{
     </div> 
     <div className="second-header">
       <ul>
-        <li>Home</li>
+        <li onClick={handleLink}><NavLink to="/" className="home-link">Home</NavLink></li>
         <li>Groceries</li>
         <li>Offers and rollBacks</li>
         <li>About us</li>

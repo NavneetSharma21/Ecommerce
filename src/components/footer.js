@@ -42,9 +42,7 @@ const Footer = () => {
                 <input type="email" placeholder="Enter your email" />
                 <button><FaArrowRight /></button>
             </div>
-
             </div>
-           
         </div>
     );
 };

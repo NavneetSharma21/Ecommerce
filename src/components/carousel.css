@@ -94,3 +94,14 @@
     color: yellow;
 }
 
+
+@media (max-width: 908px) {
+    .ButtonOnMain{
+        margin-top: 5px;
+    }
+    #btn{
+        padding: 10px;
+        margin: 5px 10px;
+    }
+  
+   }
